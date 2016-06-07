@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D029F04-95B3-4E05-B320-36346A22AEE0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TA_CreationSample</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ADT_DYNAMIC_BUILD;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_WIN32;_WINDOWS;_CRT_NOFORCE_MANIFEST;_STL_NOFORCE_MANIFEST;_TOOLKIT_IN_DLL_</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ODA_DIR)\Architecture\Include;$(ODA_DIR)\Core\Include;$(ODA_DIR)\Core\Extensions\ExServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;$(ODA_DIR)\lib\vc11dlldbg\TACommonEx.lib;$(ODA_DIR)\lib\vc11dlldbg\AecUIArchBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecUISchedule.lib;$(ODA_DIR)\lib\vc11dlldbg\AecSchedule.lib;$(ODA_DIR)\lib\vc11dlldbg\AecAreaCalculationBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecArchDACHBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecStructureBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecArchBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecScheduleData.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_ExamplesCommon.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Key.lib;$(ODA_DIR)\lib\vc11dlldbg\AecUIBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecBase.lib;$(ODA_DIR)\lib\vc11dlldbg\AecGeometry.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Db.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_DbRoot.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Gs.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Gi.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_SpatialIndex.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Ge.lib;$(ODA_DIR)\lib\vc11dlldbg\sisl.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Root.lib;$(ODA_DIR)\lib\vc11dlldbg\TD_Alloc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CreationTest.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
